@@ -2,8 +2,25 @@
 -- =============================================================================
 -- SOUND: https://freesound.org/people/straget/sounds/404687/
 -- =============================================================================
+--[[local replace_rate = tonumber(minetest.settings:get("eat_crops_delay"))
+if not replace_rate then
+	replace_rate = 15
+	minetest.settings:set("eat_crops_delay", tostring(replace_rate))
+end
 
-mobs:register_mob("crow:crow", {
+local interval = tonumber(minetest.settings:get("spawn_pests_delay"))
+if not interval then
+	interval = 15
+	minetest.settings:set("spawn_pests_delay", tostring(interval))
+end
+
+local chance = tonumber(minetest.settings:get("spawn_pests_probability"))
+if not chance then
+	chance = 15
+	minetest.settings:set("spawn_pests_probability", tostring(chance))
+end
+]]
+mobs:register_mob("hardcore_farming:crow", {
 	--nametag = "crow" ,
 	type = "animal",
 	specific_attack = {"mobs_animal:rat"},
@@ -43,7 +60,7 @@ mobs:register_mob("crow:crow", {
 	view_range = 35,
 	        stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
 "naturalbiomes:bushland_grass4"}, 4},  --"farming:wheat_8"
-	replace_rate = 15,
+	replace_rate = replace_rate,
 	replace_what = { ---- remove o nรณ e coloca outro no caso ar :)
 	"group:crop",
 	"dfarm:potato_4",
@@ -108,12 +125,12 @@ mobs:register_mob("crow:crow", {
 --========================= SPAWN ==============================================
 
 mobs:spawn({
-	name = "crow:crow",
+	name = "hardcore_farming:crow",
 	nodes =  { "group:crop"},
 	--neighbors = { "group:crops", "dfarm:carrot_4" ,"dfarm:potato_4" },
 	min_light = 1, 
-	interval = 50,
-	chance = 10,
+	interval = interval,
+	chance = chance,
 	active_object_count = 3,
 	min_height = 0,
 	max_height = 6000,
@@ -124,7 +141,7 @@ mobs:spawn({
 
 
 
-mobs:register_egg("crow:crow", "Crow", "crow_egg.png", 1)
+mobs:register_egg("hardcore_farming:crow", "Crow", "crow_egg.png", 1)
 
 -- =====================================================================
 

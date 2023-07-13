@@ -1,5 +1,23 @@
 local S = minetest.get_translator("hardcore_farming")
+--[[
+local replace_rate = tonumber(minetest.settings:get("eat_crops_delay"))
+if not replace_rate then
+	replace_rate = 15
+	minetest.settings:set("eat_crops_delay", tostring(replace_rate))
+end
 
+local interval = tonumber(minetest.settings:get("spawn_pests_delay"))
+if not interval then
+	interval = 15
+	minetest.settings:set("spawn_pests_delay", tostring(interval))
+end
+
+local chance = tonumber(minetest.settings:get("spawn_pests_probability"))
+if not chance then
+	chance = 15
+	minetest.settings:set("spawn_pests_probability", tostring(chance))
+end
+]]
 mobs:register_mob("hardcore_farming:rat", {
 	type = "animal",
 	stepheight = 3,
@@ -31,7 +49,7 @@ mobs:register_mob("hardcore_farming:rat", {
 	pushable = true,
 	        stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
 "naturalbiomes:bushland_grass4"}, 4},
-	replace_rate = 15,
+	replace_rate = replace_rate,
 		replace_what = { 
 			"group:crop",
 			"dfarm:potato_4",
@@ -75,8 +93,8 @@ mobs:spawn({
 	name = "hardcore_farming:rat",
 	nodes = {"group:crop"},
 	min_light = 0,
-	interval = 50,
-	chance = 10, -- 15000
+	interval = interval,
+	chance = chance, -- 15000
 	active_object_count = 2,
 	min_height = 0,
 	max_height = 6000,

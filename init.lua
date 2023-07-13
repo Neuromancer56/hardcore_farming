@@ -1,4 +1,25 @@
+
 local dpath = minetest.get_modpath("hardcore_farming") .. "/"
+
+ replace_rate = tonumber(minetest.settings:get("eat_crops_delay"))
+if not replace_rate then
+	replace_rate = 15
+	minetest.settings:set("eat_crops_delay", tostring(replace_rate))
+end
+
+ interval = tonumber(minetest.settings:get("spawn_pests_delay"))
+if not interval then
+	interval = 50
+	minetest.settings:set("spawn_pests_delay", tostring(interval))
+end
+
+ chance = tonumber(minetest.settings:get("spawn_pests_probability"))
+if not chance then
+	chance = 10
+	minetest.settings:set("spawn_pests_probability", tostring(chance))
+end
+
+
 function getNodesByGroup(group)
     --local nodes = {}
     for name, def in pairs(minetest.registered_nodes) do
@@ -77,5 +98,6 @@ end
 getNodesByGroup("crop")
 dofile(dpath .. "locust.lua")
 dofile(dpath .. "rat.lua")
+dofile(dpath .. "crow.lua")
 
 
