@@ -45,16 +45,18 @@ stepheight = 3,
 		distance = 16,
 	},
 	makes_footstep_sound = false,
-	walk_velocity = 3,
-        walk_chance = 15,
-	run_velocity = 4,
+	walk_velocity = 2,
+       -- walk_chance = 15,
+	run_velocity = 3,
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = true,
         jump_height = 6,
 	stepheight = 3,
-        stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
-"naturalbiomes:bushland_grass4"}, 4},  --"farming:wheat_8"
+	view_range = 35,
+       --[[ stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
+"naturalbiomes:bushland_grass4"}, 4},  --"farming:wheat_8"]]
+		stay_near = {{"group:crop"}, 4},  --"farming:wheat_8"
 	replace_rate = replace_rate,
 		replace_what = { 
 			"group:crop",
@@ -105,7 +107,8 @@ view_range = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "hardcore_farming:locust",
-	nodes = {"group:crop"}, 
+	--nodes =  { "group:crop"},
+	nodes =  { "farming:soil", "farming:soil_wet"},
 	--neighbors = {"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3", "group:grass", "group:normal_grass", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "group:grass", "group:normal_grass"},
 	min_light = 0,
 	interval = interval,

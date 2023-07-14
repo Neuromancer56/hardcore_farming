@@ -47,8 +47,10 @@ mobs:register_mob("hardcore_farming:rat", {
 	jump = true,
 	jump_height = 6,
 	pushable = true,
-	        stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
-"naturalbiomes:bushland_grass4"}, 4},
+	view_range = 35,
+	      --[[  stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
+"naturalbiomes:bushland_grass4"}, 4},]]
+		stay_near = {{"group:crop"}, 4},
 	replace_rate = replace_rate,
 		replace_what = { 
 			"group:crop",
@@ -91,7 +93,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "hardcore_farming:rat",
-	nodes = {"group:crop"},
+	--nodes =  { "group:crop"},
+	nodes =  { "farming:soil", "farming:soil_wet"},
 	min_light = 0,
 	interval = interval,
 	chance = chance, -- 15000

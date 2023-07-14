@@ -58,8 +58,9 @@ mobs:register_mob("hardcore_farming:crow", {
 	stepheight = 1.1,
 	floats = 0,
 	view_range = 35,
-	        stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
-"naturalbiomes:bushland_grass4"}, 4},  --"farming:wheat_8"
+	    --[[    stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
+"naturalbiomes:bushland_grass4"}, 4},  --"farming:wheat_8"]]
+			stay_near = {{"group:crop"}, 4},  --"farming:wheat_8"
 	replace_rate = replace_rate,
 	replace_what = { ---- remove o nรณ e coloca outro no caso ar :)
 	"group:crop",
@@ -126,7 +127,8 @@ mobs:register_mob("hardcore_farming:crow", {
 
 mobs:spawn({
 	name = "hardcore_farming:crow",
-	nodes =  { "group:crop"},
+	--nodes =  { "group:crop"},
+	nodes =  { "farming:soil", "farming:soil_wet"},
 	--neighbors = { "group:crops", "dfarm:carrot_4" ,"dfarm:potato_4" },
 	min_light = 1, 
 	interval = interval,
