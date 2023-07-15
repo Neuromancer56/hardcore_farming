@@ -38,7 +38,7 @@ stepheight = 3,
        --[[ stay_near = {{"group:crop","default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", 
 "naturalbiomes:bushland_grass4"}, 4},  --"farming:wheat_8"]]
 		stay_near = {{"group:crop"}, 4},  --"farming:wheat_8"
-	replace_rate = replace_rate,
+	replace_rate = hardcore_farming.replace_rate,
 		replace_what = { 
 			"group:crop",
 			"dfarm:potato_4",
@@ -92,8 +92,8 @@ mobs:spawn({
 	nodes =  { "farming:soil", "farming:soil_wet"},
 	--neighbors = {"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3", "group:grass", "group:normal_grass", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "group:grass", "group:normal_grass"},
 	min_light = 0,
-	interval = interval,
-	chance = chance, -- 15000
+	interval = hardcore_farming.interval,
+	chance = hardcore_farming.chance, -- 15000
 	active_object_count = 2,
 	min_height = 0,
 	max_height = 6000,
