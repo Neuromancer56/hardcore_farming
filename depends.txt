@@ -1,4 +1,5 @@
 default
 mobs
+farming?
 crops?
 x_farming?
