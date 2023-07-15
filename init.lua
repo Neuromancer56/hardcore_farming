@@ -143,5 +143,5 @@ end
 dofile(dpath .. "locust.lua")
 dofile(dpath .. "rat.lua")
 dofile(dpath .. "crow.lua")
-
+dofile(dpath .. "rat_trap.lua")
 
