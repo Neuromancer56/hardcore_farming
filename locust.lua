@@ -1,26 +1,7 @@
 local S = minetest.get_translator("hardcore_farming")
---[[
-local replace_rate = tonumber(minetest.settings:get("eat_crops_delay"))
-if not replace_rate then
-	replace_rate = 15
-	minetest.settings:set("eat_crops_delay", tostring(replace_rate))
-end
-
-local interval = tonumber(minetest.settings:get("spawn_pests_delay"))
-if not interval then
-	interval = 15
-	minetest.settings:set("spawn_pests_delay", tostring(interval))
-end
-
-local chance = tonumber(minetest.settings:get("spawn_pests_probability"))
-if not chance then
-	chance = 15
-	minetest.settings:set("spawn_pests_probability", tostring(chance))
-end
-]]
-minetest.log("test", "replace_rate:".. replace_rate)
+--[[minetest.log("test", "replace_rate:".. replace_rate)
 minetest.log("test", "interval:".. interval)
-minetest.log("test", "chance:".. chance)
+minetest.log("test", "chance:".. chance)]]
 
 mobs:register_mob("hardcore_farming:locust", {
 stepheight = 3,

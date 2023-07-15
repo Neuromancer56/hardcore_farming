@@ -50,52 +50,109 @@ local function addGroupToNode(modname, nodename, groupname)
 	end
 end
 
+if minetest.get_modpath("crops") then
+    for i=1, 2 do
+        addGroupToNode("crops", "corn_base_"..i, "crop")
+    end
+
+
+    for i=1, 3 do
+        addGroupToNode("crops", "corn_top_"..i, "crop")
+    end
+
+    for i=1, 4 do
+        addGroupToNode("crops", "potato_plant_"..i, "crop")    
+    end
+
+    for i=1, 5 do
+        addGroupToNode("crops", "tomato_plant_"..i, "crop") 
+        addGroupToNode("crops", "pumpkin_plant_"..i, "crop")
+        addGroupToNode("crops", "melon_plant_"..i, "crop")
+    end
+    addGroupToNode("crops", "corn_base_seed", "crop")
+    addGroupToNode("crops", "pumpkin_plant_5_attached", "crop")
+    addGroupToNode("crops", "melon_plant_5_attached", "crop")
+    addGroupToNode("crops", "pumpkin", "crop")
+    addGroupToNode("crops", "melon", "crop")
+end
+
+
 for i=1, 8 do
     addGroupToNode("farming", "wheat_"..i, "crop")
-    addGroupToNode("x_farming", "corn_"..i, "crop")
-    addGroupToNode("x_farming", "melon_"..i, "crop")
-    addGroupToNode("x_farming", "barley_"..i, "crop")
-    addGroupToNode("x_farming", "carrot_"..i, "crop")
-    addGroupToNode("x_farming", "coffee_"..i, "crop")
-    addGroupToNode("x_farming", "pumpkin_"..i, "crop")
-    addGroupToNode("x_farming", "soybean_"..i, "crop")
-    addGroupToNode("x_farming", "beetroot_"..i, "crop")
-    addGroupToNode("x_farming", "strawberry_"..i, "crop")
-    addGroupToNode("x_farming", "stevia_"..i, "crop")
-    addGroupToNode("x_farming", "potato_"..i, "crop")
-    addGroupToNode("x_farming", "rice_"..i, "crop")
+    addGroupToNode("farming", "barley_"..i, "crop")
+    addGroupToNode("farming", "carrot_"..i, "crop")
+    addGroupToNode("farming", "chili_"..i, "crop")
+    addGroupToNode("farming", "corn_"..i, "crop") 
+    addGroupToNode("farming", "melon_"..i, "crop")
+    addGroupToNode("farming", "hemp_"..i, "crop")
+    addGroupToNode("farming", "pineapple_"..i, "crop")
+    addGroupToNode("farming", "pumpkin_"..i, "crop")
+    addGroupToNode("farming", "oat_"..i, "crop")
+    addGroupToNode("farming", "rice_"..i, "crop")
+    addGroupToNode("farming", "rye_"..i, "crop")
+    addGroupToNode("farming", "sunflower_"..i, "crop")
+    addGroupToNode("farming", "tomato_"..i, "crop")
+    addGroupToNode("farming", "vanilla_"..i, "crop")
 end
 
-for i=1, 2 do
-    addGroupToNode("crops", "corn_base_"..i, "crop")
+for i=1, 7 do
+    addGroupToNode("farming", "pepper_"..i, "crop")
+    addGroupToNode("farming", "soy_"..i, "crop")
 end
 
-
-for i=1, 3 do
-    addGroupToNode("crops", "corn_top_"..i, "crop")
-end
-
-for i=1, 4 do
-    addGroupToNode("crops", "potato_plant_"..i, "crop")    
+for i=1, 6 do
+    addGroupToNode("farming", "cabbage_"..i, "crop")
 end
 
 for i=1, 5 do
-    addGroupToNode("crops", "tomato_plant_"..i, "crop") 
-    addGroupToNode("crops", "pumpkin_plant_"..i, "crop")
-    addGroupToNode("crops", "melon_plant_"..i, "crop")
+    addGroupToNode("farming", "artichoke_"..i, "crop")
+    addGroupToNode("farming", "asparagus_"..i, "crop")
+    addGroupToNode("farming", "beanpole_"..i, "crop")
+    addGroupToNode("farming", "beetroot_"..i, "crop")
+    addGroupToNode("farming", "garlic_"..i, "crop")
+    addGroupToNode("farming", "lettuce_"..i, "crop")    
+    addGroupToNode("farming", "pea_"..i, "crop")
+    addGroupToNode("farming", "onion_"..i, "crop")
+end
+for i=1, 4 do
+    addGroupToNode("farming", "blackberry_"..i, "crop")
+    addGroupToNode("farming", "blueberry_"..i, "crop")
+    addGroupToNode("farming", "cucumber_"..i, "crop")
+    addGroupToNode("farming", "eggplant_"..i, "crop")
+    addGroupToNode("farming", "ginger_"..i, "crop")
+    addGroupToNode("farming", "mint_"..i, "crop")
+    addGroupToNode("farming", "raspberry_"..i, "crop")
+    addGroupToNode("farming", "potato_"..i, "crop")
+    addGroupToNode("farming", "rhubarb_"..i, "crop")
+    addGroupToNode("farming", "spinach_"..i, "crop")
+end
+for i=1, 3 do
+    addGroupToNode("farming", "parsley_"..i, "crop")
+end 
+
+if minetest.get_modpath("x_farming") then
+    for i=1, 8 do
+        addGroupToNode("farming", "wheat_"..i, "crop")
+        addGroupToNode("x_farming", "corn_"..i, "crop")
+        addGroupToNode("x_farming", "melon_"..i, "crop")
+        addGroupToNode("x_farming", "barley_"..i, "crop")
+        addGroupToNode("x_farming", "carrot_"..i, "crop")
+        addGroupToNode("x_farming", "coffee_"..i, "crop")
+        addGroupToNode("x_farming", "pumpkin_"..i, "crop")
+        addGroupToNode("x_farming", "soybean_"..i, "crop")
+        addGroupToNode("x_farming", "beetroot_"..i, "crop")
+        addGroupToNode("x_farming", "strawberry_"..i, "crop")
+        addGroupToNode("x_farming", "stevia_"..i, "crop")
+        addGroupToNode("x_farming", "potato_"..i, "crop")
+        addGroupToNode("x_farming", "rice_"..i, "crop")
+    end
+    addGroupToNode("x_farming", "melon_fruit", "crop")
+    addGroupToNode("x_farming", "corn"..9, "crop")
+    addGroupToNode("x_farming", "corn"..10, "crop")
 end
 
-addGroupToNode("x_farming", "melon_fruit", "crop")
-addGroupToNode("x_farming", "corn"..9, "crop")
-addGroupToNode("x_farming", "corn"..10, "crop")
-addGroupToNode("crops", "corn_base_seed", "crop")
-addGroupToNode("crops", "pumpkin_plant_5_attached", "crop")
-addGroupToNode("crops", "melon_plant_5_attached", "crop")
-addGroupToNode("crops", "pumpkin", "crop")
-addGroupToNode("crops", "melon", "crop")
-if minetest.get_modpath("x_farming") then
-end
-getNodesByGroup("crop")
+
+--getNodesByGroup("crop")
 dofile(dpath .. "locust.lua")
 dofile(dpath .. "rat.lua")
 dofile(dpath .. "crow.lua")

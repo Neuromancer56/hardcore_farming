@@ -2,24 +2,6 @@
 -- =============================================================================
 -- SOUND: https://freesound.org/people/straget/sounds/404687/
 -- =============================================================================
---[[local replace_rate = tonumber(minetest.settings:get("eat_crops_delay"))
-if not replace_rate then
-	replace_rate = 15
-	minetest.settings:set("eat_crops_delay", tostring(replace_rate))
-end
-
-local interval = tonumber(minetest.settings:get("spawn_pests_delay"))
-if not interval then
-	interval = 15
-	minetest.settings:set("spawn_pests_delay", tostring(interval))
-end
-
-local chance = tonumber(minetest.settings:get("spawn_pests_probability"))
-if not chance then
-	chance = 15
-	minetest.settings:set("spawn_pests_probability", tostring(chance))
-end
-]]
 mobs:register_mob("hardcore_farming:crow", {
 	--nametag = "crow" ,
 	type = "animal",
