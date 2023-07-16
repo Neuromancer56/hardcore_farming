@@ -38,6 +38,7 @@ local function addGroupToNode(modname, nodename, groupname)
 end
 
 if minetest.get_modpath("crops") then
+    addGroupToNode("crops","pumpkin", "pumpkin")
     for i=1, 2 do
         addGroupToNode("crops", "corn_base_"..i, "crop")
     end
@@ -144,4 +145,6 @@ dofile(dpath .. "locust.lua")
 dofile(dpath .. "rat.lua")
 dofile(dpath .. "crow.lua")
 dofile(dpath .. "rat_trap.lua")
+dofile(dpath .. "crafting.lua")
+dofile(dpath .. "nodes.lua")
 

@@ -36,7 +36,7 @@ mobs:register_mob("hardcore_farming:crow", {
 	walk_velocity = 2,
 	run_velocity = 4,
 	runaway = true,
-        runaway_from = {"animalworld:bear","x_farming:scarecrow","x_farming:scarecrow_2"},
+        runaway_from = {"animalworld:bear","x_farming:scarecrow","x_farming:scarecrow_2", "group:scarecrow"},
 	fall_speed = -1,
 	jump_height = 4,
 	stepheight = 1.1,
