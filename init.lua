@@ -36,7 +36,7 @@ local function addGroupToNode(modname, nodename, groupname)
 
 	end
 end
-
+addGroupToNode("wool","orange", "pumpkin")  --needed to make scarecrow head
 if minetest.get_modpath("crops") then
     addGroupToNode("crops","pumpkin", "pumpkin")
     for i=1, 2 do
@@ -64,6 +64,7 @@ if minetest.get_modpath("crops") then
     addGroupToNode("crops", "melon", "crop")
 end
 
+    addGroupToNode("farming", "pumpkin_8", "pumpkin")
 
 for i=1, 8 do
     addGroupToNode("farming", "wheat_"..i, "crop")
@@ -119,6 +120,7 @@ for i=1, 3 do
 end 
 
 if minetest.get_modpath("x_farming") then
+    addGroupToNode("x_farming", "pumpkin_8", "pumpkin")
     for i=1, 8 do
         addGroupToNode("farming", "wheat_"..i, "crop")
         addGroupToNode("x_farming", "corn_"..i, "crop")
