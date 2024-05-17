@@ -89,7 +89,7 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "hardcore_farming:locust",
 	--nodes =  { "group:crop"},
-	nodes =  { "farming:soil", "farming:soil_wet"},
+	nodes =  { "farming:soil", "farming:soil_wet", "farming:dry_soil_wet", "farming:dry_soil"},
 	--neighbors = {"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3", "group:grass", "group:normal_grass", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "group:grass", "group:normal_grass"},
 	min_light = 0,
 	interval = hardcore_farming.interval,

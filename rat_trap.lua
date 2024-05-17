@@ -54,10 +54,10 @@ minetest.register_abm({
         for _, obj in ipairs(minetest.get_objects_inside_radius(pos, 0.9)) do
             if obj ~= nil and not obj:is_player() then
                 local entity = obj:get_luaentity()
-                if entity and entity.name == "hardcore_farming:rat" then
-                    obj:remove()
-                    minetest.sound_play(trapsounds.dug, {pos = pos, max_hear_distance = 30})
-                end
+				if entity and (entity.name == "hardcore_farming:rat" or entity.name == "hardcore_farming:locust") then
+					obj:remove()
+					minetest.sound_play(trapsounds.dug, {pos = pos, max_hear_distance = 30})
+				end
             end
         end
     end,

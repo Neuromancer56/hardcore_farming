@@ -77,7 +77,7 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "hardcore_farming:rat",
 	--nodes =  { "group:crop"},
-	nodes =  { "farming:soil", "farming:soil_wet"},
+	nodes =  { "farming:soil", "farming:soil_wet", "farming:dry_soil_wet", "farming:dry_soil"},
 	min_light = 0,
 	interval = hardcore_farming.interval,
 	chance = hardcore_farming.chance, -- 15000

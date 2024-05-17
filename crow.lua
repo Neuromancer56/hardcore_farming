@@ -112,7 +112,7 @@ mobs:register_mob("hardcore_farming:crow", {
 mobs:spawn({
 	name = "hardcore_farming:crow",
 	--nodes =  { "group:crop"},
-	nodes =  { "farming:soil", "farming:soil_wet"},
+	nodes =  { "farming:soil", "farming:soil_wet", "farming:dry_soil_wet", "farming:dry_soil"},
 	--neighbors = { "group:crops", "dfarm:carrot_4" ,"dfarm:potato_4" },
 	min_light = 1, 
 	interval = hardcore_farming.interval,
